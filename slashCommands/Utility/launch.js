@@ -4,8 +4,8 @@ const db = require('quick.db');
 module.exports = {
   name: 'launch',
   description: 'Laucnh embed',
-  run: async (client, message, args) => {
-    const permission = message.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)
+  run: async (client, interaction, args) => {
+    const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)
     if (!permission) return  message.reply(`❌ | Tu n'as pas la permission de lancer un embed !`)
     const logoRockstar = db.get(`rockstar_emoji`);
     const logoRockstarConverted = `<:${logoRockstar.name}:${logoRockstar.id}>`;
@@ -40,6 +40,6 @@ module.exports = {
         ]),
     );
 
-    return message.channel.send({ embeds: [embed], components: [row] });
+    return interaction.channel.send({ embeds: [embed], components: [row] });
   },
 };
