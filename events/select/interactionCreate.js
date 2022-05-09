@@ -69,7 +69,7 @@ module.exports = {
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setImage('https://1734811051.rsc.cdn77.org/data/images/full/380530/new-mysterious-lightning-storm-on-cod-warzone-verdansk-does-this-hints-a-new-content.png')                
-                return interaction.member.send({embeds: [embedSend], components: [row]});
+                return interaction.member.send({embeds: [embedSend]});
             }
         }
         catch(err) {
