@@ -29,7 +29,7 @@ module.exports = {
 
 
             if(interaction.values[0] === 'select-one') {
-                await interaction.reply({content: `<@${interaction.member.user.id}>, regarde tes message privé ! ✅`, ephemeral: true})
+                await interaction.reply({content: `<@${interaction.member.user.id}>, regarde tes message privé ! ✅`, ephemeral: true});
                 const embedSend = new MessageEmbed()
                 .setTitle(`🔓 UNLOCK-ALL / BLACK OPS 🔓`)
                 .setColor('RANDOM')
@@ -41,7 +41,7 @@ module.exports = {
             }
 
             if(interaction.values[0] === 'select-two') {
-                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
+                await interaction.reply({content: `<@${interaction.member.user.id}>, regarde tes message privé ! ✅`, ephemeral: true});
                 const embedSend = new MessageEmbed()
                 .setTitle(`🔓 UNLOCK-ALL / VANGUARD🔓 `)
                 .setColor('RANDOM')
@@ -53,7 +53,7 @@ module.exports = {
             }
 
             if(interaction.values[0] === 'select-three') {
-                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
+                await interaction.reply({content: `<@${interaction.member.user.id}>, regarde tes message privé ! ✅`, ephemeral: true});
                 const embedSend = new MessageEmbed()
                 .setTitle(`🔓 UNLOCK-ALL / MODERNE WARFARE 🔓`)
                 .setColor('RANDOM')
@@ -64,7 +64,7 @@ module.exports = {
                 return interaction.member.send({embeds: [embedSend], components: [row]});
             }
             if(interaction.values[0] === 'select-four') {
-                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
+                await interaction.reply({content: `<@${interaction.member.user.id}>, regarde tes message privé ! ✅`, ephemeral: true});
                 const embedSend = new MessageEmbed()
                 .setTitle(`🔓 UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE) 🔓`)
                 .setColor('RANDOM')
