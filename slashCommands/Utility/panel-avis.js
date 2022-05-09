@@ -1,3 +1,4 @@
+const { Permissions } = require('discord.js');
 
 module.exports = {
     name: "panel-avis",
@@ -9,7 +10,7 @@ module.exports = {
       try {
         const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS);
         if(!permission) return interaction.reply(`Tu n'as pas la permission de lancer un giveaway !`);
-        
+
         const avisEmbed = new client.discord.MessageEmbed()
         .setTitle(`Avis`)
         .setDescription(`Tu peux créer un avis via la commande **/avis** et donner une note entre 1 et 5 !`)
