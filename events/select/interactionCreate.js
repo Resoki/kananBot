@@ -8,12 +8,12 @@ module.exports = {
     async execute(interaction, client) {
         try {
             if(interaction.isButton()) return;
-            if(interaction.customId === 'select-rockstar') {
+            if(interaction.values[0] === 'select-rockstar') {
                 console.log('cc')
                 interaction.member.send('Rockstar')
             }
 
-            if(interaction.customId === 'select-rockstar') {
+            if(interaction.values[0] === 'select-rockstar') {
                 interaction.member.send('Rockstar')
             }
         }
@@ -21,10 +21,5 @@ module.exports = {
             return interaction.reply(`Error:\n${err}`)
         }
 
-        try {
-            command.run(client, interaction, args)
-        } catch (e) {
-            interaction.reply({ content: e.message });
-        }
     }
 }
