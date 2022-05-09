@@ -26,8 +26,7 @@ module.exports = {
         if(interaction.channel !== channel) return interaction.reply(`Tu peux seulement créer un avis dans le channel <#971511033803976734>`);
         const content = interaction.options.getString('content');
         const star = interaction.options.getNumber('star');
-        if(star === 0) return interaction.reply(`Tu ne peux pas mettre 0 !`)
-        if(star > 5 ) return interaction.reply('Tu ne peux pas mettre plus de 5 étoiles !')
+        if(star !== 1 || 2 || 3 || 4 || 5) return interaction.reply(`Le nombre d'etoile doit être compris entre 1 et 5`)
         const starEmoji = "⭐";
 
         const avisEmbed = new client.discord.MessageEmbed()
