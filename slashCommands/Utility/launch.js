@@ -17,28 +17,29 @@ module.exports = {
     //const logoRedEngineConverted = `<:${logoRedEngine.name}:${logoRedEngine.id}>`;
 
     const embed = new MessageEmbed()
-    .setTitle('Choose the object you want the price')
+    .setTitle('Shop Information')
     .setColor('BLUE')
     .setDescription('Choose a product listed on this menu for more information about it\nThe prices are send in MP, please allow DM on the server')
-    .setImage('https://media.discordapp.net/attachments/971150039583965186/971502722576691240/banniere.jpg')
-
     const row = new MessageActionRow()
     .addComponents(
     new MessageSelectMenu()
         .setCustomId('select')
         .setPlaceholder('Choose the object you want the price')
         .addOptions([
-         {
-                label: `Rockstar`,
-                description: `FiveM Ready Account FA and GTAV Download FA`,
-                value: 'select-rockstar',
-
+             {
+                label: `One`,
+                description: `One Select`,
+                value: 'select-one',
             },
             {
-                label: 'redENGINE',
-                description : 'redENGINE is an Executor for FiveM',
-                value: 'select-rendengine',
-      
+                label: 'Two',
+                description : 'Two Select',
+                value: 'select-two',
+            },
+            {
+                label: 'Three',
+                description : 'Three Select',
+                value: 'select-three',
             },
         ]),
     );

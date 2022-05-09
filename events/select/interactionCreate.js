@@ -8,13 +8,16 @@ module.exports = {
     async execute(interaction, client) {
         try {
             if(interaction.isButton()) return;
-            if(interaction.values[0] === 'select-rockstar') {
-                console.log('cc')
-                interaction.member.send('Rockstar')
+            if(interaction.values[0] === 'select-one') {
+                return interaction.member.send('one');
             }
 
-            if(interaction.values[0] === 'select-rockstar') {
-                interaction.member.send('Rockstar')
+            if(interaction.values[0] === 'select-two') {
+                return interaction.member.send('two');
+            }
+
+            if(interaction.values[0] === 'select-three') {
+                return interaction.member.send('three');
             }
         }
         catch(err) {
