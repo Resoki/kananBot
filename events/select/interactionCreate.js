@@ -31,7 +31,8 @@ module.exports = {
             if(interaction.values[0] === 'select-one') {
                 interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
                 .then((msg)=> {
-                    msg.delete({timeout: 2000});
+                    interaction.delete()
+                    setTimeout(()=> msg.delete(), 5000)
                 })
                 const embedSend = new MessageEmbed()
                 .setTitle(`<@${interaction.member.user.id}>, 🔓 UNLOCK-ALL / BLACK OPS 🔓`)
