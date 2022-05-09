@@ -10,11 +10,11 @@ module.exports = {
   run: async (client, interaction, args) => {
     const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)
     if (!permission) return  message.reply(`❌ | Tu n'as pas la permission de lancer un embed !`)
-    const logoRockstar = db.get(`rockstar_emoji`);
-    const logoRockstarConverted = `<:${logoRockstar.name}:${logoRockstar.id}>`;
+    //const logoRockstar = db.get(`rockstar_emoji`);
+    //const logoRockstarConverted = `<:${logoRockstar.name}:${logoRockstar.id}>`;
 
-    const logoRedEngine = db.get(`redEngine_emoji`);
-    const logoRedEngineConverted = `<:${logoRedEngine.name}:${logoRedEngine.id}>`;
+    //const logoRedEngine = db.get(`redEngine_emoji`);
+    //const logoRedEngineConverted = `<:${logoRedEngine.name}:${logoRedEngine.id}>`;
 
     const embed = new MessageEmbed()
     .setTitle('Choose the object you want the price')
