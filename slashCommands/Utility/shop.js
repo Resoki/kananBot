@@ -2,7 +2,7 @@ const { MessageEmbed, Permissions, MessageActionRow, MessageSelectMenu} = requir
 
 module.exports = {
     name: "shop",
-    aliases: ["lh"],
+    aliases: ["shopp"],
     category: "Utility",
     description: "Launch Menu Shop !",
     ownerOnly: false,
@@ -11,11 +11,6 @@ module.exports = {
     if(interaction.channel !== channel) return interaction.reply(`Tu peux seulement envoyer le pannel de shop dans <#971030867638091826>`);
     const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)
     if (!permission) return  message.reply(`❌ | Tu n'as pas la permission de lancer un embed !`)
-    //const logoRockstar = db.get(`rockstar_emoji`);
-    //const logoRockstarConverted = `<:${logoRockstar.name}:${logoRockstar.id}>`;
-
-    //const logoRedEngine = db.get(`redEngine_emoji`);
-    //const logoRedEngineConverted = `<:${logoRedEngine.name}:${logoRedEngine.id}>`;
 
     const embed = new MessageEmbed()
     .setTitle('💰 Shop Information 💰')
