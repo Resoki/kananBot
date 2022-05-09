@@ -15,6 +15,7 @@ module.exports = {
                 .setLabel("Acheter")
                 .setStyle("LINK")
                 .setCustomId('click-buy')
+                .setURL('https://dashboard.heroku.com/apps/kiradunlocks/logs')
             );
 
             if(interaction.customId === 'click-buy') {
