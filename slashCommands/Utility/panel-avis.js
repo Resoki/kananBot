@@ -13,7 +13,7 @@ module.exports = {
         .setColor('YELLOW')
         .setTimestamp()
         .setThumbnail('https://www.adportesfenetres.com/wp-content/uploads/2014/10/cinq_etoiles-300x83-1-e1607099568270.png')
-        .setFooter({ text: `Create avis`, iconURL: `${client.user.displayAvatarURL()}` });
+        .setFooter({ text: `Panel Avis`, iconURL: `${client.user.displayAvatarURL()}` });
   
         await interaction.reply({ embeds: [avisEmbed]});
       }
