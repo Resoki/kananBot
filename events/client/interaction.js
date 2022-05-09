@@ -1,5 +1,10 @@
 module.exports = {
     name: 'interactionCreate',
+    
+    /**
+     * @param {CommandInteraction} interaction 
+     * @param {Client} client 
+     */
     async execute(interaction) {
         try {
             if(interaction.isButton()) return;
