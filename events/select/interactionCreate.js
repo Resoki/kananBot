@@ -1,4 +1,4 @@
-const { MessageEmbed, MessageButton } = require("discord.js");
+const { MessageEmbed, MessageButton, MessageActionRow } = require("discord.js");
 
 module.exports = {
     name: 'interactionCreate',
@@ -9,7 +9,7 @@ module.exports = {
      */
     async execute(interaction, client) {
         try {
-            const row = new client.discord.MessageActionRow()
+            var row = new MessageActionRow()
             .addComponents(
                 new MessageButton()
                 .setLabel("Acheter")
