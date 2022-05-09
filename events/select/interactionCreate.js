@@ -9,6 +9,7 @@ module.exports = {
      */
     async execute(interaction, client) {
         try {
+            if(interaction.isCommand()) return;
             let row = new MessageActionRow()
             .addComponents(
                 new MessageButton()
