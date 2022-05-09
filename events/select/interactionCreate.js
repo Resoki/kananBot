@@ -31,7 +31,6 @@ module.exports = {
             if(interaction.values[0] === 'select-one') {
                 interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
                 .then((msg)=> {
-                    interaction.delete()
                     setTimeout(()=> msg.delete(), 5000)
                 })
                 const embedSend = new MessageEmbed()
