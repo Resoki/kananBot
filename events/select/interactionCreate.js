@@ -5,7 +5,7 @@ module.exports = {
      * @param {CommandInteraction} interaction 
      * @param {Client} client 
      */
-    async execute(interaction) {
+    async execute(interaction, client) {
         try {
             if(interaction.isButton()) return;
             if(interaction.customId === 'select-rockstar') {
@@ -19,6 +19,12 @@ module.exports = {
         }
         catch(err) {
             return interaction.reply(`Error:\n${err}`)
+        }
+
+        try {
+            command.run(client, interaction, args)
+        } catch (e) {
+            interaction.reply({ content: e.message });
         }
     }
 }
