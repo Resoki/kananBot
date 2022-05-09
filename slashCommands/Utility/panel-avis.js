@@ -12,7 +12,7 @@ module.exports = {
         .setDescription(`Tu peux créer un avis via la commande **/avis**`)
         .setColor('ORANGE')
         .setTimestamp()
-        .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
+        .setThumbnail('https://cdn-icons-png.flaticon.com/512/1754/1754908.png')
         .setFooter({ text: `Create avis`, iconURL: `${client.user.displayAvatarURL()}` });
   
         await interaction.reply({ embeds: [avisEmbed]});
