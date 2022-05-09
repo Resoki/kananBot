@@ -9,13 +9,12 @@ module.exports = {
      */
     async execute(interaction, client) {
         try {
-            var row = new MessageActionRow()
+            let row = new MessageActionRow()
             .addComponents(
                 new MessageButton()
                 .setLabel("Acheter")
                 .setStyle("LINK")
                 .setCustomId('click-buy')
-                .setURL('https://dashboard.heroku.com/apps/kiradunlocks/logs')
             );
 
             if(interaction.customId === 'click-buy') {
@@ -25,7 +24,7 @@ module.exports = {
                 .setDescription(`Pour acheter, ouvre un ticket ici: <#971042396743802951>`)
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))            
-                return interaction.member.send({embeds: [embedBuy]});
+                return interaction.member.send({embeds: [embedBuy], components: [row]});
             }
 
 
