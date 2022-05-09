@@ -27,19 +27,24 @@ module.exports = {
         .setPlaceholder('Choose the object you want the price')
         .addOptions([
              {
-                label: `One`,
+                label: `UNLOCK-ALL / BLACK OPS`,
                 description: `One Select`,
                 value: 'select-one',
             },
             {
-                label: 'Two',
+                label: 'UNLOCK-ALL / VANGUARD',
                 description : 'Two Select',
                 value: 'select-two',
             },
             {
-                label: 'Three',
+                label: 'UNLOCK-ALL / MODERNE WARFARE',
                 description : 'Three Select',
                 value: 'select-three',
+            },
+            {
+                label: 'UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE)',
+                description : 'Four Select',
+                value: 'select-four',
             },
         ]),
     );
