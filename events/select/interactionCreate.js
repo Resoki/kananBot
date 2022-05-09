@@ -13,7 +13,7 @@ module.exports = {
             .addComponents(
                 new MessageButton()
                 .setLabel("Acheter")
-                .setStyle("LINK")
+                .setStyle("PRIMARY")
                 .setCustomId('click-buy')
             );
 
