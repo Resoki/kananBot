@@ -24,8 +24,8 @@ module.exports = {
       try {
         const channel = interaction.member.guild.channels.cache.find(channel => channel.id === '971511033803976734');
         if(interaction.channel !== channel) return interaction.reply(`Tu peux seulement créer un avis dans le channel <#971511033803976734>`);
-        const content = interaction.options.getString('content');
-        const star = interaction.options.getNumber('star');
+        const content = await interaction.options.getString('content');
+        const star = await interaction.options.getNumber('star');
         if(star < 0 || star >5) return interaction.reply(`Le nombre d'etoile doit être compris entre 1 et 5`)
         const starEmoji = "⭐";
 
@@ -40,7 +40,7 @@ module.exports = {
 
         await db.add(`nbAvis`, 1);
   
-        await interaction.reply({ embeds: [avisEmbed]});
+        return interaction.reply({ embeds: [avisEmbed]});
       }
       catch(err){
         return interaction.channel.send(`Une erreur a eu lieu **avis.js** \n${err}`)
