@@ -1,6 +1,5 @@
 module.exports = {
     name: 'ready',
-    once: true,
 
     /**
      * @param {Client} client 
@@ -10,7 +9,7 @@ module.exports = {
         // Puts an activity
         client.user.setActivity("Expectatives#1157", {
             type: "WATCHING",
-            name: "Expectatives#1157"
+            name: "KiradUnlocks"
         });
         
         // Send a message on the console
