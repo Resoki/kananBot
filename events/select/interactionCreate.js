@@ -29,7 +29,7 @@ module.exports = {
 
 
             if(interaction.values[0] === 'select-one') {
-                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
+                await interaction.reply({content: `<@${interaction.member.user.id}>, regarde tes message privé ! ✅`, ephemeral: true})
                 const embedSend = new MessageEmbed()
                 .setTitle(`🔓 UNLOCK-ALL / BLACK OPS 🔓`)
                 .setColor('RANDOM')
