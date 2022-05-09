@@ -17,14 +17,14 @@ module.exports = {
     //const logoRedEngineConverted = `<:${logoRedEngine.name}:${logoRedEngine.id}>`;
 
     const embed = new MessageEmbed()
-    .setTitle('Shop Information 🔓')
+    .setTitle('💰 Shop Information 💰')
     .setColor('BLUE')
-    .setDescription('Choisi ce que tu souhaites voir')
+    .setDescription('Choisi ce que tu souhaites voir ! Unlock ALL 🟢')
     const row = new MessageActionRow()
     .addComponents(
     new MessageSelectMenu()
         .setCustomId('select')
-        .setPlaceholder('Choose the object you want the price')
+        .setPlaceholder('Fais ton choix')
         .addOptions([
              {
                 label: `UNLOCK-ALL / BLACK OPS`,

@@ -33,7 +33,7 @@ module.exports = {
                 const embedSend = new MessageEmbed()
                 .setTitle(`🔓 UNLOCK-ALL / BLACK OPS 🔓`)
                 .setColor('RANDOM')
-                .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
+                .setDescription(`<@${interaction.member.user.id}>,\n*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setImage('https://static.actugaming.net/media/2016/05/call-of-duty-black-ops.jpg')                
