@@ -24,22 +24,22 @@ module.exports = {
         .addOptions([
              {
                 label: `UNLOCK-ALL / BLACK OPS`,
-                description: `One Select`,
+                description: `Buy an Unlock All 🟢`,
                 value: 'select-one',
             },
             {
                 label: 'UNLOCK-ALL / VANGUARD',
-                description : 'Two Select',
+                description : 'Buy an Unlock All 🟢',
                 value: 'select-two',
             },
             {
                 label: 'UNLOCK-ALL / MODERNE WARFARE',
-                description : 'Three Select',
+                description : 'Buy an Unlock All 🟢',
                 value: 'select-three',
             },
             {
                 label: 'UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE)',
-                description : 'Four Select',
+                description : 'Buy an Unlock All 🟢',
                 value: 'select-four',
             },
         ]),
