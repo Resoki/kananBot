@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, MessageButton } = require("discord.js");
 
 module.exports = {
     name: 'interactionCreate',
@@ -10,6 +10,14 @@ module.exports = {
     async execute(interaction, client) {
         try {
             if(interaction.isButton()) return;
+
+            const row = new client.discord.MessageActionRow()
+            .addComponents(
+                new MessageButton()
+                .setLabel("Acheter")
+                .setStyle("LINK")
+            );
+
             if(interaction.values[0] === 'select-one') {
                 const embedSend = new MessageEmbed()
                 .setTitle('🔓 UNLOCK-ALL / BLACK OPS 🔓')
@@ -18,7 +26,7 @@ module.exports = {
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setImage('https://static.actugaming.net/media/2016/05/call-of-duty-black-ops.jpg')                
-                return interaction.member.send({embeds: [embedSend]});
+                return interaction.member.send({embeds: [embedSend], components: [row]});
             }
 
             if(interaction.values[0] === 'select-two') {
@@ -29,7 +37,7 @@ module.exports = {
                 .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
                 .setImage('https://bnetcmsus-a.akamaihd.net/cms/blog_header/G0EEDKCN5EG21633976665304.jpg')                
-                return interaction.member.send({embeds: [embedSend]})
+                return interaction.member.send({embeds: [embedSend], components: [row]});
             }
 
             if(interaction.values[0] === 'select-three') {
@@ -40,7 +48,7 @@ module.exports = {
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setImage('https://static.actugaming.net/media/2019/10/call-of-duty-modern-warfare-2.jpg')                
-                return interaction.member.send({embeds: [embedSend]})
+                return interaction.member.send({embeds: [embedSend], components: [row]});
             }
             if(interaction.values[0] === 'select-four') {
                 const embedSend = new MessageEmbed()
@@ -50,7 +58,7 @@ module.exports = {
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setImage('https://1734811051.rsc.cdn77.org/data/images/full/380530/new-mysterious-lightning-storm-on-cod-warzone-verdansk-does-this-hints-a-new-content.png')                
-                return interaction.member.send({embeds: [embedSend]})
+                return interaction.member.send({embeds: [embedSend], components: [row]});
             }
         }
         catch(err) {
