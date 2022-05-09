@@ -1,12 +1,14 @@
 const { MessageEmbed, Permissions, MessageActionRow, MessageSelectMenu} = require('discord.js');
 
 module.exports = {
-    name: "launch",
+    name: "shop",
     aliases: ["lh"],
     category: "Utility",
-    description: "Launch Menu !",
+    description: "Launch Menu Shop !",
     ownerOnly: false,
   run: async (client, interaction, args) => {
+    const channel = await interaction.member.guild.channels.cache.find(channel => channel.id === '971030867638091826');
+    if(interaction.channel !== channel) return interaction.reply(`Tu peux seulement envoyer le pannel de shop dans <#971030867638091826>`);
     const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)
     if (!permission) return  message.reply(`❌ | Tu n'as pas la permission de lancer un embed !`)
     //const logoRockstar = db.get(`rockstar_emoji`);
