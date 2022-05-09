@@ -12,7 +12,7 @@ module.exports = {
             if(interaction.isButton()) return;
             if(interaction.values[0] === 'select-one') {
                 const embedSend = new MessageEmbed()
-                .setTitle('UNLOCK-ALL / BLACK OPS')
+                .setTitle('🔓 UNLOCK-ALL / BLACK OPS 🔓')
                 .setColor('RANDOM')
                 .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
@@ -23,7 +23,7 @@ module.exports = {
 
             if(interaction.values[0] === 'select-two') {
                 const embedSend = new MessageEmbed()
-                .setTitle('UNLOCK-ALL / VANGUARD')
+                .setTitle('🔓 UNLOCK-ALL / VANGUARD🔓 ')
                 .setColor('RANDOM')
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
@@ -34,7 +34,7 @@ module.exports = {
 
             if(interaction.values[0] === 'select-three') {
                 const embedSend = new MessageEmbed()
-                .setTitle('UNLOCK-ALL / MODERNE WARFARE')
+                .setTitle('🔓 UNLOCK-ALL / MODERNE WARFARE 🔓')
                 .setColor('RANDOM')
                 .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
@@ -44,7 +44,7 @@ module.exports = {
             }
             if(interaction.values[0] === 'select-four') {
                 const embedSend = new MessageEmbed()
-                .setTitle('UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE) ')
+                .setTitle('🔓 UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE) 🔓')
                 .setColor('RANDOM')
                 .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
