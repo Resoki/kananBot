@@ -24,7 +24,7 @@ module.exports = {
                 .setDescription(`Pour acheter, ouvre un ticket ici: <#971042396743802951>`)
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))            
-                return interaction.reply({embeds: [embedBuy], components: [row]});
+                return interaction.reply({embeds: [embedBuy]});
             }
 
 
