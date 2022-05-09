@@ -9,14 +9,24 @@ module.exports = {
      */
     async execute(interaction, client) {
         try {
-            if(interaction.isButton()) return;
-
             const row = new client.discord.MessageActionRow()
             .addComponents(
                 new MessageButton()
                 .setLabel("Acheter")
                 .setStyle("LINK")
+                .setCustomId('click-buy')
             );
+
+            if(interaction.customId === 'click-buy') {
+                const embedBuy = new MessageEmbed()
+                .setTitle('Acheter')
+                .setColor('RANDOM')
+                .setDescription(`Pour acheter, ouvre un ticket ici: <#971042396743802951>`)
+                .setTimestamp()
+                .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))            
+                return interaction.member.send({embeds: [embedBuy]});
+            }
+
 
             if(interaction.values[0] === 'select-one') {
                 const embedSend = new MessageEmbed()
