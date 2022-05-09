@@ -9,10 +9,10 @@ module.exports = {
       try {
         const avisEmbed = new client.discord.MessageEmbed()
         .setTitle(`Avis`)
-        .setDescription(`Tu peux créer un avis via la commande **/avis**`)
-        .setColor('ORANGE')
+        .setDescription(`Tu peux créer un avis via la commande **/avis** et donner une note entre 1 et 5 !`)
+        .setColor('YELLOW')
         .setTimestamp()
-        .setThumbnail('https://cdn-icons-png.flaticon.com/512/1754/1754908.png')
+        .setThumbnail('https://www.adportesfenetres.com/wp-content/uploads/2014/10/cinq_etoiles-300x83-1-e1607099568270.png')
         .setFooter({ text: `Create avis`, iconURL: `${client.user.displayAvatarURL()}` });
   
         await interaction.reply({ embeds: [avisEmbed]});
