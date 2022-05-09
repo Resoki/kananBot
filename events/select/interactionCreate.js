@@ -24,7 +24,7 @@ module.exports = {
                 .setDescription(`Pour acheter, ouvre un ticket ici: <#971042396743802951>`)
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))            
-                return interaction.member.send({embeds: [embedBuy], components: [row]});
+                return interaction.reply({embeds: [embedBuy], components: [row]});
             }
 
 
@@ -68,7 +68,7 @@ module.exports = {
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setImage('https://1734811051.rsc.cdn77.org/data/images/full/380530/new-mysterious-lightning-storm-on-cod-warzone-verdansk-does-this-hints-a-new-content.png')                
-                return interaction.member.send({embeds: [embedSend]});
+                return interaction.member.send({embeds: [embedSend], components: [row]});
             }
         }
         catch(err) {
