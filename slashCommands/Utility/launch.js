@@ -1,5 +1,4 @@
 const { MessageEmbed, Permissions, MessageActionRow, MessageSelectMenu} = require('discord.js');
-const db = require('quick.db');
 
 module.exports = {
     name: "launch",
@@ -8,6 +7,7 @@ module.exports = {
     description: "Launch Menu !",
     ownerOnly: false,
   run: async (client, interaction, args) => {
+    if(!interaction.isCommand()) return;
     const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)
     if (!permission) return  message.reply(`❌ | Tu n'as pas la permission de lancer un embed !`)
     //const logoRockstar = db.get(`rockstar_emoji`);
