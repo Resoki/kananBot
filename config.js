@@ -13,5 +13,6 @@ module.exports = {
     ],
     ticketsOpenCategory: "971050725276799046", // id when open ticket
     ticketsCloseCategory: "971050753693216818", // id when close ticket
-    ticketsTranscripts: "971050753693216818" // channel transcript
+    ticketsTranscripts: "971050753693216818", // channel transcript,
+    roleClient: "971028982352982041",
 }
