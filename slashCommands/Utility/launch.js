@@ -2,8 +2,11 @@ const { MessageEmbed, Permissions, MessageActionRow, MessageSelectMenu} = requir
 const db = require('quick.db');
 
 module.exports = {
-  name: 'launch',
-  description: 'Laucnh embed',
+    name: "launch",
+    aliases: ["lh"],
+    category: "Utility",
+    description: "Launch Menu !",
+    ownerOnly: false,
   run: async (client, interaction, args) => {
     const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)
     if (!permission) return  message.reply(`❌ | Tu n'as pas la permission de lancer un embed !`)
