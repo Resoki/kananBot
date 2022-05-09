@@ -1,0 +1,57 @@
+const { MessageEmbed } = require("discord.js");
+
+module.exports = {
+    name: 'interactionCreate',
+    
+    /**
+     * @param {CommandInteraction} interaction 
+     * @param {Client} client 
+     */
+    async execute(interaction, client) {
+        try {
+            if(interaction.isButton()) return;
+            if(interaction.values[0] === 'select-one') {
+                const embedSend = new MessageEmbed()
+                .setTitle('UNLOCK-ALL / BLACK OPS')
+                .setColor('RANDOM')
+                .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n.*Super facile à utiliser (1 seul bouton pour l'activer`)
+                .setTimestamp()
+                .setImage('https://static.actugaming.net/media/2016/05/call-of-duty-black-ops.jpg')                
+                return interaction.member.send({embeds: [embedSend]});
+            }
+
+            if(interaction.values[0] === 'select-two') {
+                const embedSend = new MessageEmbed()
+                .setTitle('UNLOCK-ALL / VANGUARD')
+                .setColor('RANDOM')
+                .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n.*Super facile à utiliser (1 seul bouton pour l'activer`)
+                .setTimestamp()
+                .setImage('https://bnetcmsus-a.akamaihd.net/cms/blog_header/G0EEDKCN5EG21633976665304.jpg')                
+                return interaction.member.send({embeds: [embedSend]})
+            }
+
+            if(interaction.values[0] === 'select-three') {
+                const embedSend = new MessageEmbed()
+                .setTitle('UNLOCK-ALL / MODERNE WARFARE')
+                .setColor('RANDOM')
+                .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n.*Super facile à utiliser (1 seul bouton pour l'activer`)
+                .setTimestamp()
+                .setImage('https://static.actugaming.net/media/2019/10/call-of-duty-modern-warfare-2.jpg')                
+                return interaction.member.send({embeds: [embedSend]})
+            }
+            if(interaction.values[0] === 'select-four') {
+                const embedSend = new MessageEmbed()
+                .setTitle('UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE) ')
+                .setColor('RANDOM')
+                .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n.*Super facile à utiliser (1 seul bouton pour l'activer`)
+                .setTimestamp()
+                .setImage('')                
+                return interaction.member.send({embeds: [embedSend]})
+            }
+        }
+        catch(err) {
+            return interaction.reply(`Error:\n${err}`)
+        }
+
+    }
+}
