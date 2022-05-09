@@ -29,11 +29,9 @@ module.exports = {
 
 
             if(interaction.values[0] === 'select-one') {
-                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`).then((msg)=> {
-                    setTimeout(()=> msg.delete(), 5000)
-                })
+                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
                 const embedSend = new MessageEmbed()
-                .setTitle(`<@${interaction.member.user.id}>, 🔓 UNLOCK-ALL / BLACK OPS 🔓`)
+                .setTitle(`🔓 UNLOCK-ALL / BLACK OPS 🔓`)
                 .setColor('RANDOM')
                 .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
@@ -43,31 +41,34 @@ module.exports = {
             }
 
             if(interaction.values[0] === 'select-two') {
+                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
                 const embedSend = new MessageEmbed()
-                .setTitle(`<@${interaction.member.user.id}>, 🔓 UNLOCK-ALL / VANGUARD🔓 `)
+                .setTitle(`🔓 UNLOCK-ALL / VANGUARD🔓 `)
                 .setColor('RANDOM')
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
-                .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
+                .setDescription(`<@${interaction.member.user.id}>,\n*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
                 .setImage('https://bnetcmsus-a.akamaihd.net/cms/blog_header/G0EEDKCN5EG21633976665304.jpg')                
                 return interaction.member.send({embeds: [embedSend], components: [row]});
             }
 
             if(interaction.values[0] === 'select-three') {
+                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
                 const embedSend = new MessageEmbed()
-                .setTitle(`<@${interaction.member.user.id}>, 🔓 UNLOCK-ALL / MODERNE WARFARE 🔓`)
+                .setTitle(`🔓 UNLOCK-ALL / MODERNE WARFARE 🔓`)
                 .setColor('RANDOM')
-                .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
+                .setDescription(`<@${interaction.member.user.id}>,\n*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setImage('https://static.actugaming.net/media/2019/10/call-of-duty-modern-warfare-2.jpg')                
                 return interaction.member.send({embeds: [embedSend], components: [row]});
             }
             if(interaction.values[0] === 'select-four') {
+                await interaction.reply(`<@${interaction.member.user.id}>, regarde tes message privé ! ✅`)
                 const embedSend = new MessageEmbed()
-                .setTitle(`<@${interaction.member.user.id}>, 🔓 UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE) 🔓`)
+                .setTitle(`🔓 UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE) 🔓`)
                 .setColor('RANDOM')
-                .setDescription(`*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
+                .setDescription(`<@${interaction.member.user.id}>,\n*Déverrouille TOUS les items\n*A vie (accès illimité)\n*Comptes illimités (sans lien avec 1 compte)\n*Non détecté (utilise un drivers en ligne, aucun fichier sur votre ordinateur)\n*Mise à jour presque instantanée après les mises à jour du jeux\n*Super facile à utiliser (1 seul bouton pour l'activer`)
                 .setTimestamp()
                 .setThumbnail(client.user.displayAvatarURL({size: 512, dynamic: true}))
                 .setImage('https://1734811051.rsc.cdn77.org/data/images/full/380530/new-mysterious-lightning-storm-on-cod-warzone-verdansk-does-this-hints-a-new-content.png')                
