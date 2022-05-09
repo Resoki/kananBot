@@ -24,12 +24,6 @@ module.exports = {
       try {
         const channel = interaction.member.guild.channels.cache.find(channel => channel.id === '971511033803976734');
         if(interaction.channel !== channel) return interaction.reply(`Tu peux seulement créer un avis dans le channel <#971511033803976734>`);
-
-        const roleClient = interaction.member.guild.roles.cache.find(role => role.id === global.roleClient);
-        console.log(roleClient)
-        if(!interaction.member.roles.has(roleClient)) {
-            return interaction.reply('Il faut le rôle **Clients** pour mettre un avis !')
-        }
         const content = interaction.options.getString('content');
         const star = interaction.options.getNumber('star');
         if(star === 0) return interaction.reply(`Tu ne peux pas mettre 0 !`)
