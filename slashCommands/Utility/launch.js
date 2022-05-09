@@ -17,9 +17,9 @@ module.exports = {
     //const logoRedEngineConverted = `<:${logoRedEngine.name}:${logoRedEngine.id}>`;
 
     const embed = new MessageEmbed()
-    .setTitle('Shop Information')
+    .setTitle('Shop Information 🔓')
     .setColor('BLUE')
-    .setDescription('Choose a product listed on this menu for more information about it\nThe prices are send in MP, please allow DM on the server')
+    .setDescription('Choisi ce que tu souhaites voir')
     const row = new MessageActionRow()
     .addComponents(
     new MessageSelectMenu()

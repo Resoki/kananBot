@@ -7,7 +7,7 @@ module.exports = {
     async execute(client) {
         
         // Puts an activity
-        client.user.setActivity("Expectatives#1157", {
+        client.user.setActivity("KiradUnlocks", {
             type: "WATCHING",
             name: "KiradUnlocks"
         });
