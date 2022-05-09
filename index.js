@@ -1,5 +1,6 @@
 const { Client, Collection, Intents } = require('discord.js');
 const handler = require("./handler/index");
+const { GiveawaysManager } = require('discord-giveaways');
 
 const client = new Client({
     intents: [
@@ -40,6 +41,18 @@ handler.loadSlashCommands(client);
 
 // Error Handling
 
+const manager = new GiveawaysManager(client, {
+    storage: './giveaways.json',
+    default: {
+        botsCanWin: false,
+        embedColor: '#FF0000',
+        embedColorEnd: '#000000',
+        reaction: '🎉'
+    }
+});
+
+client.giveawaysManager = manager;
+
 process.on("uncaughtException", (err) => {
     console.log("Uncaught Exception: " + err);
 });
@@ -49,4 +62,4 @@ process.on("unhandledRejection", (reason, promise) => {
 });
 
 // Login Discord Bot Token
-client.login(process.env.TOKEN);
+client.login(process.env.DJS_TOKEN);

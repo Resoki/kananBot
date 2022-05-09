@@ -3,7 +3,7 @@ module.exports = {
     options: [
         {
             name: "user",
-            description: "Write the user you want to add to the ticket!",
+            description: "Ecrit l'user que tu veux ajouter au ticket !",
             type: "USER",
             required: true
         }
@@ -23,9 +23,9 @@ module.exports = {
                 VIEW_CHANNEL: true
             });
             
-            interaction.reply({ content: `${user} was added to the ticket by ${interaction.user}` });
+            interaction.reply({ content: `${user} a été ajouté au ticket par ${interaction.user}` });
         } else {
-            interaction.reply({ content: "This command can only be used on tickets!", ephemeral: true });
+            interaction.reply({ content: "Cette commande ne peut être utilisé que dans un ticket !", ephemeral: true });
         }
     }
 }

@@ -38,7 +38,7 @@ module.exports = {
                 ],
             });
             
-            await interaction.editReply({ content: `Ticket created successfully in ${createdChannel}!` , ephemeral: true });
+            await interaction.editReply({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
 
             const row = new client.discord.MessageActionRow()
             .addComponents(
@@ -49,8 +49,8 @@ module.exports = {
             );
 
             const embed = new client.discord.MessageEmbed()
-            .setTitle("New Ticket!")
-            .setDescription(`Hello <@!${interaction.user.id}>, a staff will assist you shortly!\n\n**Press the 🔒 button to close the ticket!**`)
+            .setTitle("Nouveau Ticket!")
+            .setDescription(`Hello <@!${interaction.user.id}>, un staff va vous assister bientôt !!\n\n**Clique sur 🔒 pour fermer le ticket !**`)
             .setColor(client.config.embedColor)
             .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 

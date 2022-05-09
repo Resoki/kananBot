@@ -1,16 +1,17 @@
 module.exports = {
-    botClientID: "YOUR_BOT_ID",
+    botClientID: "973144180702461982", // client application id du bot (trouveable sur https://discord.com/developers/application)
     botPrefix: "!",
-    guildID: "YOUR_GUILD_ID",
-    ownerID: "YOUR_ID",
+    channelJoin:"971029374067413013",
+    guildID: "971025089975947285", // id server
+    ownerID: "768393722554613791", // id du proprietaire du serveur
     embedColor: "#00dbff",
-    embedfooterText: "Ticket Bot by Expectatives#1157",
+    embedfooterText: "KiradUnlocks",
 
-    ticketsSupportRoles: [
-        "YOUR_SUPPORT_ROLE_ID_1",
-        "YOUR_SUPPORT_ROLE_ID_2"
+    ticketsSupportRoles: [ // role allow to see ticket
+        "956550751163940954",
+        "956550751163940954"
     ],
-    ticketsOpenCategory: "CATEGORY_ID_OPEN",
-    ticketsCloseCategory: "CATEGORY_ID_CLOSE",
-    ticketsTranscripts: "TRANSCRIPT_CHANNEL_ID"
+    ticketsOpenCategory: "971050725276799046", // id when open ticket
+    ticketsCloseCategory: "971050753693216818", // id when close ticket
+    ticketsTranscripts: "971050753693216818" // channel transcript
 }

@@ -3,13 +3,13 @@ module.exports = {
     options: [
         {
             name: "user",
-            description: "Write the user you want to remove to the ticket!",
+            description: "Ecrit l'user que tu veux retirer du ticket !",
             type: "USER",
             required: true
         }
     ],
     category: "Tickets",
-    description: "Remove user to ticket!",
+    description: "Retirer un membre du ticket",
     userPerms: ["SEND_MESSAGES"],
     ownerOnly: false,
     run: async (client, interaction, args) => {
@@ -23,9 +23,9 @@ module.exports = {
                 VIEW_CHANNEL: false
             });
 
-            interaction.reply({ content: `${user} was removed to the ticket by ${interaction.user}` });
+            interaction.reply({ content: `${user} a été retiré du ticket par ${interaction.user}` });
         } else {
-            interaction.reply({ content: "This command can only be used on tickets!", ephemeral: true });
+            interaction.reply({ content: "Cette commande ne peux être utilisé que dans un ticket", ephemeral: true });
         }
     }
 }
