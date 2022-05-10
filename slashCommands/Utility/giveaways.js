@@ -32,7 +32,7 @@ module.exports = {
         const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS);
         if(!permission) return interaction.reply(`Tu n'as pas la permission de lancer un giveaway !`);
         const duration = interaction.options.getString('duration');
-        const winnerCount = interaction.options.getInteger('nb_winner');
+        const winnerCount = interaction.options.getNumber('nb_winner');
         const prize = interaction.options.getString('prize');
   
         client.giveawaysManager.start(interaction.channel, {
