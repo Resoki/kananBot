@@ -22,23 +22,8 @@ module.exports = {
         .setCustomId('select')
         .setPlaceholder('Fais ton choix')
         .addOptions([
-             {
-                label: `UNLOCK-ALL / BLACK OPS`,
-                description: `Buy an Unlock All 🟢`,
-                value: 'select-one',
-            },
             {
-                label: 'UNLOCK-ALL / VANGUARD',
-                description : 'Buy an Unlock All 🟢',
-                value: 'select-two',
-            },
-            {
-                label: 'UNLOCK-ALL / MODERNE WARFARE',
-                description : 'Buy an Unlock All 🟢',
-                value: 'select-three',
-            },
-            {
-                label: 'UNLOCK-ALL / WARZONE (VANGUARD,BLACK OPS,MODERNE WARFARE)',
+                label: 'UNLOCK-ALL / WARZONE ',
                 description : 'Buy an Unlock All 🟢',
                 value: 'select-four',
             },
