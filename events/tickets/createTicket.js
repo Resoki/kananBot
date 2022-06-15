@@ -19,8 +19,6 @@ module.exports = {
                 }
             });
 
-            await interaction.reply({ content: `Creating ticket...`, ephemeral: true });
-
             if (interaction.guild.channels.cache.find(c => c.topic == interaction.user.id && c.name.includes("ticket"))) return interaction.editReply({ content: `You have already created a ticket!`, ephemeral: true });
 
             const createdChannel = await interaction.guild.channels.create(ticketName, {
@@ -40,7 +38,7 @@ module.exports = {
                 ],
             });
             
-            await interaction.editReply({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
+            await interaction.reply({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
 
             const row = new client.discord.MessageActionRow()
             .addComponents(
