@@ -1,4 +1,3 @@
-const { LoggerLevel } = require('mongodb');
 const cron = require('node-cron');
 const global = require('../../config');
 
