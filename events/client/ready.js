@@ -18,11 +18,11 @@ module.exports = {
             const guild = client.guilds.cache.get(global.guildID);
             var memberCount = guild.memberCount;
 
-            const members = await guild.roles.cache.get('983047841272451082').members.map(m=>m.user.id);
+            const members = await guild.roles.cache.get(global.roleClient).members.map(m=>m.user.id);
             const count = members.length;
-            console.log(count)
+
             const channel = client.channels.cache.find(channel => channel.id === '983334338022219797');
-            await channel.setName(`Clients: ${count}`)
+            await channel.setName(`《🥳》Clients: ${count}`)
             }
             catch(err){
                 return console.log(err)
