@@ -18,7 +18,7 @@ module.exports = {
             const guild = client.guilds.cache.get(global.guild_id);
             var memberCount = guild.memberCount;
 
-            const channel = client.channels.cache.find(channel => channel.id === '983316997779632153');
+            const channel = client.channels.cache.find(channel => channel.id === '');
             await channel.setName(`Membres: ${memberCount}`)
           });
         
