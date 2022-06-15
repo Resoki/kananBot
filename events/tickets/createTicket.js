@@ -49,7 +49,7 @@ module.exports = {
                 .setCustomId("ticket-close")
             );
 
-            const emoji = client.emojis.cache.get("984549122734440508")
+            const emoji = client.emojis.cache.find(emoji => emoji.name === "a_redarrow");
             createdChannel.send(emoji)
             const embed = new client.discord.MessageEmbed()
             .setTitle("Nouveau Ticket!")
