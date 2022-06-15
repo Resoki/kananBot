@@ -1,4 +1,3 @@
-const global = require('../../config');
 module.exports = {
     name: 'interactionCreate',
 
@@ -11,14 +10,16 @@ module.exports = {
 
         if (interaction.customId === 'create-ticket') {
             let ticketName = `ticket-${interaction.user.username}`.toLowerCase();
-            let supportRoles = await global.ticketsSupportRoles.map(x => {
+            let supportRoles = await client.config.ticketsSupportRoles.map(x => {
                 return {
                     id: x,
                     allow: ["VIEW_CHANNEL", "SEND_MESSAGES", "ATTACH_FILES", "EMBED_LINKS", "MANAGE_MESSAGES"]
                 }
             });
 
-            if (interaction.guild.channels.cache.find(c => c.topic == interaction.user.id && c.name.includes("ticket"))) return interaction.reply({ content: `You have already created a ticket!`, ephemeral: true });
+            await interaction.reply({ content: `Creating ticket...`, ephemeral: true });
+
+            if (interaction.guild.channels.cache.find(c => c.topic == interaction.user.id && c.name.includes("ticket"))) return interaction.editReply({ content: `You have already created a ticket!`, ephemeral: true });
 
             const createdChannel = await interaction.guild.channels.create(ticketName, {
                 type: "text",
@@ -37,7 +38,7 @@ module.exports = {
                 ],
             });
             
-            await interaction.reply({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
+            await interaction.editReply({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
 
             const row = new client.discord.MessageActionRow()
             .addComponents(
