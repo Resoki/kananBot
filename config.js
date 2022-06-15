@@ -5,7 +5,7 @@ module.exports = {
     guildID: "983043373789233222", // id server
     ownerID: "768393722554613791", // id du proprietaire du serveur
     embedColor: "#00dbff",
-    embedfooterText: "KiradUnlocks",
+    embedfooterText: "SpacyUnlocks",
 
     ticketsSupportRoles: [ // role allow to see ticket
         "983047636670099486",
