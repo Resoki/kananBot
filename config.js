@@ -1,8 +1,8 @@
 module.exports = {
-    botClientID: "973144180702461982", // client application id du bot (trouveable sur https://discord.com/developers/application)
+    botClientID: "986580340674031636", // client application id du bot (trouveable sur https://discord.com/developers/application)
     botPrefix: "!",
     channelJoin:"971029374067413013",
-    guildID: "971025089975947285", // id server
+    guildID: "983043373789233222", // id server
     ownerID: "768393722554613791", // id du proprietaire du serveur
     embedColor: "#00dbff",
     embedfooterText: "KiradUnlocks",
