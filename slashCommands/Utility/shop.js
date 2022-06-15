@@ -7,10 +7,11 @@ module.exports = {
     description: "Launch Menu Shop !",
     ownerOnly: false,
   run: async (client, interaction, args) => {
+    try {
     const channel = await interaction.member.guild.channels.cache.find(channel => channel.id === '971030867638091826');
     if(interaction.channel !== channel) return interaction.reply(`Tu peux seulement envoyer le pannel de shop dans <#971030867638091826>`);
     const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS)
-    if (!permission) return  message.reply(`❌ | Tu n'as pas la permission de lancer un embed !`)
+    if (!permission) return  interaction.reply(`❌ | Tu n'as pas la permission de lancer un embed !`)
 
     const embed = new MessageEmbed()
     .setTitle('💰 Shop Information 💰')
@@ -30,6 +31,10 @@ module.exports = {
         ]),
     );
 
-    return interaction.channel.send({ embeds: [embed], components: [row] });
+    return interaction.reply({ embeds: [embed], components: [row] });
+      }
+      catch(err){
+        return interaction.channel.send(`Une erreur a eu lieu:\n ${err}`)
+      }
   },
 };

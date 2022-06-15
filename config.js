@@ -8,8 +8,8 @@ module.exports = {
     embedfooterText: "KiradUnlocks",
 
     ticketsSupportRoles: [ // role allow to see ticket
-        "971026268168540190",
-        "971027876646383697"
+        "983047636670099486",
+        "983047006421389412"
     ],
     ticketsOpenCategory: "983286788758077440", // id when open ticket
     ticketsCloseCategory: "983286788758077440", // id when close ticket
