@@ -9,7 +9,7 @@ module.exports = {
 
     ticketsSupportRoles: [ // role allow to see ticket
         "983047636670099486",
-        "983047006421389412"
+        "983047636670099486"
     ],
     ticketsOpenCategory: "983286788758077440", // id when open ticket
     ticketsCloseCategory: "983286788758077440", // id when close ticket

@@ -59,7 +59,7 @@ module.exports = {
         }
     }
     catch(err){
-        return interaction.reply(`Une erreur a eu lieu:\n${err}`)
+        return interaction.channel.send(`Une erreur a eu lieu:\n${err}`)
     }
     }
 }
