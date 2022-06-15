@@ -1,3 +1,4 @@
+const global = require('../../config');
 module.exports = {
     name: 'interactionCreate',
 
@@ -10,12 +11,13 @@ module.exports = {
 
         if (interaction.customId === 'create-ticket') {
             let ticketName = `ticket-${interaction.user.username}`.toLowerCase();
-            let supportRoles = await client.config.ticketsSupportRoles.map(x => {
+            let supportRoles = await global.ticketsSupportRoles.map(x => {
                 return {
                     id: x,
                     allow: ["VIEW_CHANNEL", "SEND_MESSAGES", "ATTACH_FILES", "EMBED_LINKS", "MANAGE_MESSAGES"]
                 }
             });
+            console.log(supportRoles)
 
             await interaction.reply({ content: `Creating ticket...`, ephemeral: true });
 
