@@ -8,7 +8,6 @@ module.exports = {
      * @param {Client} client 
      */
     async execute(client) {
-        
         // Puts an activity
         client.user.setActivity("KiradUnlocks", {
             type: "WATCHING",
@@ -16,6 +15,7 @@ module.exports = {
         });
 
         cron.schedule('* * * * *', async() => {
+            try {
             const guild = client.guilds.cache.get(global.guild_id);
             var memberCount = guild.memberCount;
 
@@ -24,6 +24,10 @@ module.exports = {
             console.log(count)
             const channel = client.channels.cache.find(channel => channel.id === '983334338022219797');
             await channel.setName(`Clients: ${count}`)
+            }
+            catch(err){
+                return console.log(err)
+            }
           });
         
         // Send a message on the console
