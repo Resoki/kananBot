@@ -15,7 +15,7 @@ module.exports = {
 
         cron.schedule('* * * * *', async() => {
             try {
-            const guild = client.guilds.cache.get(global.guild_id);
+            const guild = client.guilds.cache.get(global.guildID);
             var memberCount = guild.memberCount;
 
             const members = await guild.roles.cache.get('983047841272451082').members.map(m=>m.user.id);
