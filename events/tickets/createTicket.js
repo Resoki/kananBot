@@ -38,7 +38,7 @@ module.exports = {
                 ],
             });
             
-            await interaction.reply({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
+            await interaction.channel.send({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
 
             const row = new client.discord.MessageActionRow()
             .addComponents(
@@ -58,7 +58,7 @@ module.exports = {
         }
     }
     catch(err){
-        return interaction.channel.send(`Une erreur a eu lieu:\n${err}`)
+        return interaction.channel.send(`Une erreur a eu lieu **createTicket.js**:\n${err}`)
     }
     }
 }
