@@ -49,9 +49,11 @@ module.exports = {
                 .setCustomId("ticket-close")
             );
 
+            const emoji = client.emojis.cache.get("984549122734440508")
+            createdChannel.send(emoji)
             const embed = new client.discord.MessageEmbed()
             .setTitle("Nouveau Ticket!")
-            .setDescription(`Hello <@!${interaction.user.id}>, un staff va vous assister bientôt !!\n\n**Clique sur 🔒 pour fermer le ticket !**`)
+            .setDescription(`Hello <@!${interaction.user.id}>, Bonjour, merci d'avoir crée un ticket !!\nUn membre du staff, vous répondra sous 30 minutes. Pendant ce temps, tenez-nous au courant de votre commande \n\n**Clique sur 🔒 pour fermer le ticket !**`)
             .setColor(client.config.embedColor)
             .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 
