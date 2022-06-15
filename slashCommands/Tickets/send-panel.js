@@ -15,6 +15,7 @@ module.exports = {
     userPerms: ["ADMINISTRATOR"],
     ownerOnly: false,
     run: async (client, interaction) => {
+        try {
         const channel = interaction.options.getChannel("channel");
 
         const row = new client.discord.MessageActionRow()
@@ -33,5 +34,9 @@ module.exports = {
 
         interaction.reply({ content: `Le pannel de ticket a été envoyé dans le channel > ${channel}!`, ephemeral: true });
         return channel.send({ embeds: [embed], components: [row] });
+        }
+        catch(err){
+            return interaction.reply('erreur sendpannel.js', err)
+        }
     }
 }
