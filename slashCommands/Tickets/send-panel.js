@@ -23,7 +23,7 @@ module.exports = {
         .addComponents(
             new client.discord.MessageButton()
             .setStyle("SECONDARY")
-            .setEmoji("Ticket Payments📩")
+            .setEmoji("📩")
             .setCustomId("create-ticket")
         );
 
