@@ -10,7 +10,6 @@ module.exports = {
         if (!interaction.isButton()) return;
 
         if (interaction.customId === 'create-ticket') {
-            console.log('dedan create')
             let ticketName = `ticket-${interaction.user.username}`.toLowerCase();
             let supportRoles = await client.config.ticketsSupportRoles.map(x => {
                 return {
@@ -19,7 +18,9 @@ module.exports = {
                 }
             });
 
-            if (interaction.guild.channels.cache.find(c => c.topic == interaction.user.id && c.name.includes("ticket"))) return interaction.channel.send({ content: `You have already created a ticket!`, ephemeral: true });
+            await interaction.reply({ content: `Creating ticket...`, ephemeral: true });
+
+            if (interaction.guild.channels.cache.find(c => c.topic == interaction.user.id && c.name.includes("ticket"))) return interaction.editReply({ content: `You have already created a ticket!`, ephemeral: true });
 
             const createdChannel = await interaction.guild.channels.create(ticketName, {
                 type: "text",
@@ -38,7 +39,7 @@ module.exports = {
                 ],
             });
             
-            await interaction.channel.send({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
+            await interaction.editReply({ content: `Ticket crée avec success dans ${createdChannel}!` , ephemeral: true });
 
             const row = new client.discord.MessageActionRow()
             .addComponents(
@@ -58,7 +59,7 @@ module.exports = {
         }
     }
     catch(err){
-        return interaction.channel.send(`Une erreur a eu lieu **createTicket.js**:\n${err}`)
+        return interaction.channel.send(`Une erreur a eu lieu CREATEJS:\n${err}`)
     }
     }
 }
