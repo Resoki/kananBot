@@ -19,7 +19,7 @@ module.exports = {
                 }
             });
 
-            if (interaction.guild.channels.cache.find(c => c.topic == interaction.user.id && c.name.includes("ticket"))) return interaction.editReply({ content: `You have already created a ticket!`, ephemeral: true });
+            if (interaction.guild.channels.cache.find(c => c.topic == interaction.user.id && c.name.includes("ticket"))) return interaction.channel.send({ content: `You have already created a ticket!`, ephemeral: true });
 
             const createdChannel = await interaction.guild.channels.create(ticketName, {
                 type: "text",
