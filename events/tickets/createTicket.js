@@ -7,6 +7,7 @@ module.exports = {
      */
     async execute(interaction, client) {
         if (!interaction.isButton()) return;
+        try {
 
         if (interaction.customId === 'create-ticket') {
             let ticketName = `ticket-${interaction.user.username}`.toLowerCase();
@@ -56,5 +57,9 @@ module.exports = {
 
             await createdChannel.send({ content: `${client.config.ticketsSupportRoles.map((m) => `<@&${m}>`).join(", ")}. New Ticket!`, embeds: [embed], components: [row] });
         }
+    }
+    catch(err){
+        return interaction.reply(`Une erreur a eu lieu:\n${err}`);
+    }
     }
 }
