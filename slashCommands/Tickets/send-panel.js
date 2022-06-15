@@ -23,12 +23,12 @@ module.exports = {
         .addComponents(
             new client.discord.MessageButton()
             .setStyle("SECONDARY")
-            .setEmoji("📩")
+            .setEmoji("Ticket Payments📩")
             .setCustomId("create-ticket")
         );
 
         const embed = new client.discord.MessageEmbed()
-        .setTitle("Create ticket")
+        .setTitle("Ticket Payements")
         .setDescription("Pour créer un ticket, réagis avec 📩")
         .setColor(client.config.embedColor)
         .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
