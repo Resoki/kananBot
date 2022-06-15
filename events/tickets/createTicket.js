@@ -10,6 +10,7 @@ module.exports = {
         if (!interaction.isButton()) return;
 
         if (interaction.customId === 'create-ticket') {
+            console.log('dedan create')
             let ticketName = `ticket-${interaction.user.username}`.toLowerCase();
             let supportRoles = await client.config.ticketsSupportRoles.map(x => {
                 return {
