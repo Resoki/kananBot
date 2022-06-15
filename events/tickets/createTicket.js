@@ -49,8 +49,8 @@ module.exports = {
                 .setCustomId("ticket-close")
             );
 
-            const emoji = client.emojis.cache.find(emoji => emoji.name === "a_redarrow");
-            createdChannel.send(emoji)
+           // const emoji = client.emojis.cache.find(emoji => emoji.name === "a_redarrow");
+          //  createdChannel.send(emoji)
             const embed = new client.discord.MessageEmbed()
             .setTitle("Nouveau Ticket!")
             .setDescription(`Hello <@!${interaction.user.id}>, Bonjour, merci d'avoir crée un ticket !!\nUn membre du staff, vous répondra sous 30 minutes. Pendant ce temps, tenez-nous au courant de votre commande \n\n**Clique sur 🔒 pour fermer le ticket !**`)
