@@ -13,6 +13,6 @@ module.exports = {
     ],
     ticketsOpenCategory: "983286788758077440", // id when open ticket
     ticketsCloseCategory: "983286788758077440", // id when close ticket
-    ticketsTranscripts: "986581779894898689", // channel transcript,
+    ticketsTranscripts: "983286996120268800", // channel transcript,
     roleClient: "983047841272451082",
 }
