@@ -47,7 +47,7 @@ module.exports = {
 
         const embed = new client.discord.MessageEmbed()
         .setTitle(`${title} 🎫`)
-        .setThumbnail('https://icon-library.com/images/icon-ticket/icon-ticket-3.jpg')
+        .setThumbnail('https://static.vecteezy.com/system/resources/previews/001/189/271/non_2x/tickets-png.png')
         .setDescription(description)
         .setColor(client.config.embedColor)
         .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
