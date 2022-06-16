@@ -49,7 +49,7 @@ module.exports = {
                 .setTitle("Ticket Transcript")
                 .addFields(
                     { name: "Channel", value: `${interaction.channel.name}` },
-                    { name: "Ticket Owner", value: `<@!${member.id}>` },
+                    { name: "Ticket De", value: `<@!${member.id}>` },
                     { name: "Direct Transcript", value: `[Direct Transcript](${transcript.url})` }
                 )
                 .setColor(client.config.embedColor)
@@ -58,9 +58,9 @@ module.exports = {
                 await transcriptsChannel.send({ embeds: [embed], components: [row] });
             });
 
-            await msg.edit({ content: `Transcript saved to <#${transcriptsChannel.id}>` });
+            await msg.edit({ content: `Transcript sauvegardé vers <#${transcriptsChannel.id}>` });
 
-            await channel.send({ content: 'Ticket will be deleted in 5 seconds!' });
+            await channel.send({ content: 'Le ticket va être supprimé dans **5 secondes**..' });
 
             setTimeout(async function () {
                 channel.delete();
