@@ -56,8 +56,9 @@ module.exports = {
 
            // const emoji = client.emojis.cache.find(emoji => emoji.name === "a_redarrow");
           //  createdChannel.send(emoji)
+          console.log(interaction.message.embeds[0])
             const embed = new client.discord.MessageEmbed()
-            .setTitle("Nouveau Ticket!")
+            .setTitle(`Nouveau Ticket:\n${interaction.message.embeds[0].title}`)
             .setDescription(`Hello <@!${interaction.user.id}>, Bonjour, merci d'avoir crée un ticket !!\nUn membre du staff, vous répondra sous 30 minutes.\n\n**Clique sur 🔒 pour fermer le ticket !**`)
             .setColor(client.config.embedColor)
             .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
