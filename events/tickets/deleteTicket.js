@@ -48,8 +48,8 @@ module.exports = {
                 const embed = new client.discord.MessageEmbed()
                 .setTitle("Ticket Fermé")
                 .addFields(
-                    { name: "📝 Channel", value: `${interaction.channel.name}` },
-                    { name: "🔓 Ouvert par", value: `<@!${member.id}>` },
+                    { name: "📝 Channel", value: `${interaction.channel.name}`, inline: true },
+                    { name: "🔓 Ouvert par", value: `<@!${member.id}>`, inline: true },
                     { name: "🔒 Fermé par", value: `<@!${interaction.member.user.id}>` },
                     { name: "📜 Direct Transcript", value: `[Direct Transcript](${transcript.url})` }
                 )
