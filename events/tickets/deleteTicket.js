@@ -46,7 +46,7 @@ module.exports = {
                 );
         
                 const embed = new client.discord.MessageEmbed()
-                .setTitle("Ticket Transcript")
+                .setTitle("Ticket Fermé")
                 .addFields(
                     { name: "📝 Channel", value: `${interaction.channel.name}` },
                     { name: "🔓 Ouvert par", value: `<@!${member.id}>` },
@@ -55,7 +55,6 @@ module.exports = {
                 )
                 .setColor(client.config.embedColor)
                 .setTimestamp()
-                .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
         
                 await transcriptsChannel.send({ embeds: [embed], components: [row] });
             });
