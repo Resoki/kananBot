@@ -46,7 +46,7 @@ module.exports = {
         );
 
         const embed = new client.discord.MessageEmbed()
-        .setTitle(title)
+        .setTitle(`${title} 🎫`)
         .setDescription(description)
         .setColor(client.config.embedColor)
         .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
