@@ -59,7 +59,7 @@ module.exports = {
             const embed = new client.discord.MessageEmbed()
             .setTitle(`Nouveau Ticket !\n${interaction.message.embeds[0].title}`)
             .setThumbnail('http://assets.stickpng.com/images/5a5a6d3714d8c4188e0b0890.png')
-            .setDescription(`Hello <@!${interaction.user.id}>, Bonjour, merci d'avoir crée un ticket !!\nUn membre du staff, vous répondra sous 30 minutes.\n\n**Clique sur 🔒 pour fermer le ticket !**`)
+            .setDescription(`Bonjour <@!${interaction.user.id}>, merci d'avoir crée un ticket !!\nUn membre du staff, vous répondra sous 30 minutes.\n\n**Clique sur 🔒 pour fermer le ticket !**`)
             .setColor(client.config.embedColor)
             .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 
