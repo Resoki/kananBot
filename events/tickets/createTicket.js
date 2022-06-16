@@ -47,6 +47,11 @@ module.exports = {
                 .setStyle("DANGER")
                 .setEmoji("🔒")
                 .setCustomId("ticket-close")
+            ,
+                new client.discord.MessageButton()
+                .setStyle("SECONDARY")
+                .setEmoji("✋")
+                .setCustomId("reclame-ticket")
             );
 
            // const emoji = client.emojis.cache.find(emoji => emoji.name === "a_redarrow");
