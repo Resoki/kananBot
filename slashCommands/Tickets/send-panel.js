@@ -17,6 +17,14 @@ module.exports = {
             usage: '**/send-panel**',
             channelTypes: ["GUILD_TEXT"],
             required: true
+        },
+        {
+            name: 'description',
+            description: 'desc du pannel',
+            type: 3,
+            usage: '**/send-panel**',
+            channelTypes: ["GUILD_TEXT"],
+            required: true
         }
     ],
     category: "Tickets",
@@ -27,6 +35,7 @@ module.exports = {
         try {
         const channel = interaction.options.getChannel("channel");
         const title = interaction.options.getString("title");
+        const description = interaction.options.getString("description");
 
         const row = new client.discord.MessageActionRow()
         .addComponents(
@@ -38,7 +47,7 @@ module.exports = {
 
         const embed = new client.discord.MessageEmbed()
         .setTitle(title)
-        .setDescription("Pour créer un ticket, réagis avec 📩")
+        .setDescription(description)
         .setColor(client.config.embedColor)
         .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 
