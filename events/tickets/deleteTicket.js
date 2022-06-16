@@ -48,11 +48,13 @@ module.exports = {
                 const embed = new client.discord.MessageEmbed()
                 .setTitle("Ticket Transcript")
                 .addFields(
-                    { name: "Channel", value: `${interaction.channel.name}` },
-                    { name: "Ticket De", value: `<@!${member.id}>` },
-                    { name: "Direct Transcript", value: `[Direct Transcript](${transcript.url})` }
+                    { name: "📝 Channel", value: `${interaction.channel.name}` },
+                    { name: "🔓 Ouvert par", value: `<@!${member.id}>` },
+                    { name: "🔒 Fermé par", value: `<@!${interaction.member.user.id}>` },
+                    { name: "📜 Direct Transcript", value: `[Direct Transcript](${transcript.url})` }
                 )
                 .setColor(client.config.embedColor)
+                .setTimestamp()
                 .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
         
                 await transcriptsChannel.send({ embeds: [embed], components: [row] });
