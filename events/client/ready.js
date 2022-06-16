@@ -16,10 +16,10 @@ module.exports = {
         cron.schedule('* * * * *', async() => {
             try {
             const guild = client.guilds.cache.get(global.guildID);
-            var memberCount = guild.memberCount;
 
-            const members = await guild.roles.cache.get(global.roleClient).members.map(m=>m.user.id);
-            const count = members.length;
+            const membersRolePc = await guild.roles.cache.get(global.roleClientPC).members.map(m=>m.user.id);
+            const membersRoleConsole = await guild.roles.cache.get(global.roleClientConsole).members.map(m=>m.user.id);
+            const count = membersRolePc.length + membersRoleConsole.length;
 
             const channel = client.channels.cache.find(channel => channel.id === '983334338022219797');
             await channel.setName(`《🥳》Clients: ${count}`)
