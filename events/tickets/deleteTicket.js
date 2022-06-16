@@ -41,7 +41,7 @@ module.exports = {
                 .addComponents(
                     new client.discord.MessageButton()
                     .setStyle("LINK")
-                    .setEmoji("📑Voir le Transcript")
+                    .setEmoji("📑")
                     .setURL(`${transcript.url}`)
                 );
         
