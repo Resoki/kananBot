@@ -46,7 +46,7 @@ module.exports = {
         );
 
         const embed = new client.discord.MessageEmbed()
-        .setTitle(`${title} 🎫`)
+        .setTitle(`${title}`)
         .setThumbnail('https://static.vecteezy.com/system/resources/previews/001/189/271/non_2x/tickets-png.png')
         .setDescription(description)
         .setColor(client.config.embedColor)
