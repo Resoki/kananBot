@@ -45,7 +45,7 @@ module.exports = {
             .setTitle("Close Ticket!")
             .setThumbnail('https://icon-library.com/images/close-icon-png/close-icon-png-19.jpg')
             .setDescription(`Ticket fermé par <@!${interaction.user.id}>!\n\n**Clique sur 🗑️ pour fermer le ticket!**`)
-            .setColor(client.config.embedColor)
+            .setColor('RED')
             .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
             
             interaction.reply({ embeds: [embed], components: [rowDeleteFalse] }).then(() => setTimeout(() => {
