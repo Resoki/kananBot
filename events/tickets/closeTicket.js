@@ -43,7 +43,7 @@ module.exports = {
             
             const embed = new client.discord.MessageEmbed()
             .setTitle("Close Ticket!")
-            .setThumbnail('https://icon-library.com/images/close-icon-png/close-icon-png-19.jpg')
+            .setThumbnail('https://cdn-icons-png.flaticon.com/512/179/179429.png')
             .setDescription(`Ticket fermé par <@!${interaction.user.id}>!\n\n**Clique sur 🗑️ pour fermer le ticket!**`)
             .setColor('RED')
             .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
