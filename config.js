@@ -1,6 +1,7 @@
 module.exports = {
     botClientID: "986580340674031636", // client application id du bot (trouveable sur https://discord.com/developers/application)
     botPrefix: "!",
+    token: "ODQ3Mzc3MzI1MTM2ODA1OTA4.GLhOb3.RmjdryPEa2mTHVFugfS4VYH2RB20ImRGQ1Xfj4",
     channelJoin:"986600018268004434",
     guildID: "983043373789233222", // id server
     ownerID: "768393722554613791", // id du proprietaire du serveur
@@ -16,4 +17,6 @@ module.exports = {
     ticketsTranscripts: "983286996120268800", // channel transcript,
     roleClientPC: "983047841272451082",
     roleClientConsole: "986361097575600201",
+
+    channelInvite: "983045634753982474",
 }

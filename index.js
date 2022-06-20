@@ -1,6 +1,7 @@
 const { Client, Collection, Intents } = require('discord.js');
 const handler = require("./handler/index");
 const { GiveawaysManager } = require('discord-giveaways');
+const {channelInvite, token} = require('./config');
 
 const client = new Client({
     intents: [
@@ -56,10 +57,49 @@ client.giveawaysManager = manager;
 process.on("uncaughtException", (err) => {
     console.log("Uncaught Exception: " + err);
 });
+
+const InvitesTracker = require('@androz2091/discord-invites-tracker');
+const tracker = InvitesTracker.init(client, {
+    fetchGuilds: true,
+    fetchVanity: true,
+    fetchAuditLogs: true
+});
+
+
+tracker.on('guildMemberAdd', async(member, type, invite) => {
+
+  const welcomeChannel = member.guild.channels.cache.find((ch) => ch.id === channelInvite);
+
+  const baseEmbed = async(description) => {
+    const embedInvite = new Discord.MessageEmbed()
+    .setTitle('Invite Tracker')
+    .setDescription(description)
+    .setColor('BLUE');
+
+    return welcomeChannel.send({embeds: [embedInvite]});
+  }
+
+  if(type === 'normal'){
+    await baseEmbed(`Bienvenue ${member} ! Tu as été invité par ${invite.inviter.username}!`);
+  }
+
+  else if(type === 'vanity'){
+    await baseEmbed(`Bienvenue ${member}! Tu as rejoin en utilisant une invitation custom !`);
+  }
+
+  else if(type === 'permissions'){
+    await baseEmbed(`Bienvenue ${member}! Je ne peux pas te dire par quel moyen tu as rejoins le serveur car je n'ai pas la permission 'MANAGE Server'!`);
+  }
+
+  else if(type === 'unknown'){
+    await baseEmbed(`Bienvenue ${member}! Je ne peux pas te dire par quel moyen tu as rejoins le serveur !`);
+  }
+
+});
   
 process.on("unhandledRejection", (reason, promise) => {
     console.log("[FATAL] Possibly Unhandled Rejection at: Promise ", promise, " reason: ", reason.message);
 });
 
 // Login Discord Bot Token
-client.login(process.env.DJS_TOKEN);
+client.login(process.env.DJS_TOKEN || token);
