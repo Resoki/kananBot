@@ -19,7 +19,6 @@ module.exports = {
         guild.invites.fetch()
         .then((guildInvites)=> {
           invites.set(guild.id, new Map(guildInvites.map((invite) => [invite.code, invite.uses])));
-          console.log(invites)
         })
       
 
