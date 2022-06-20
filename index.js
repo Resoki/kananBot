@@ -80,7 +80,7 @@ tracker.on('guildMemberAdd', async(member, type, invite) => {
   }
 
   if(type === 'normal'){
-    await baseEmbed(`Bienvenue ${member} ! Tu as été invité par ${invite.inviter.username}!`);
+    await baseEmbed(`Bienvenue ${member} ! Tu as été invité par <@${invite.inviter.id}> !`);
   }
 
   else if(type === 'vanity'){
