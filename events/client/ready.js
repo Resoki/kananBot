@@ -31,7 +31,7 @@ module.exports = {
             const membersRoleConsole = await guild.roles.cache.get(global.roleClientConsole).members.map(m=>m.user.id);
             const count = membersRolePc.length + membersRoleConsole.length;
 
-            const channel = client.channels.cache.find(channel => channel.id === '965591252257112084');
+            const channel = client.channels.cache.find(channel => channel.id === '983334338022219797');
             await channel.setName(`《🥳》Clients: ${count}`)
             }
             catch(err){
