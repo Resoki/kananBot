@@ -11,7 +11,7 @@ module.exports = {
         // Puts an activity
         client.user.setActivity("KiradUnlocks", {
             type: "WATCHING",
-            name: "KiradUnlocks"
+            name: "SpacyUnlocks"
         });
         let invites = new Collection();
 
