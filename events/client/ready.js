@@ -9,7 +9,7 @@ module.exports = {
      */
     async execute(client) {
         // Puts an activity
-        client.user.setActivity("KiradUnlocks", {
+        client.user.setActivity("SpacyUnlocks", {
             type: "WATCHING",
             name: "SpacyUnlocks"
         });
