@@ -4,7 +4,7 @@ module.exports = {
         {
             name: "user",
             description: "Ecrit l'user que tu veux retirer du ticket !",
-            type: "USER",
+            type: 6,
             required: true
         }
     ],

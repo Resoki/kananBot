@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@androz2091/discord-invites-tracker": "^1.1.0",
+    "@discordjs/rest": "^0.5.0",
     "chalk": "^4.1.0",
     "discord-badges": "^0.0.0",
     "discord-giveaways": "^5.1.1",

@@ -1,6 +1,9 @@
 const fs = require("fs");
 const chalk = require("chalk");
-
+const global = require('../config')
+const { REST } = require('@discordjs/rest');
+const { Routes } = require('discord-api-types/v9');
+const rest = new REST({ version: '9' }).setToken(process.env.DJS_TOKEN || global.token);
 /**
  * Load Events
  */
@@ -74,7 +77,6 @@ const loadSlashCommands = async function (client) {
             
             if (command.name) {
                 client.slash.set(command.name, command);
-                slash.push(command)
                 console.log(chalk.bgBlueBright.black(` ✔️ => SlashCommand ${file} is being loaded `));
             } else {
                 console.log(chalk.bgRedBright.black(` ❌ => SlashCommand ${file} missing a help.name or help.name is not in string `));
@@ -82,45 +84,21 @@ const loadSlashCommands = async function (client) {
             }
         }
     }
+    (async () => {
+        try {
+            console.log('Started refreshing application (/) commands.');
+    
+            await rest.put(
+                Routes.applicationGuildCommands(global.botClientID, global.guildID),
+                { body: client.slash },
+            );
+    
+            console.log('Successfully reloaded application (/) commands.');
+        } catch (error) {
+            console.error(`erreur lors du load des commandes: ${error}`);
+        }
+    })();
 
-    client.on("ready", async() => {
-        const guild = client.guilds.cache.get(client.config.guildID);
-        await guild.commands.set(slash).then((cmd) => {
-            const getRoles = (commandName) => {
-                const permissions = slash.find(x => x.name == commandName).userPerms;
-
-                if (!permissions) return null;
-                return guild.roles.cache.filter(x => x.permissions.has(permissions) && !x.managed).first(10);
-            }
-
-            const fullPermissions = cmd.reduce((accumulator, x) => {
-                const roles = getRoles(x.name);
-
-                if (!roles) return accumulator;
-
-                const permissions = roles.reduce((a, v) => {
-                    return [
-                        ...a,
-                        {
-                            id: v.id,
-                            type: "ROLE",
-                            permission: true,
-                        }
-                    ]
-                }, []);
-
-                return [
-                    ...accumulator,
-                    {
-                        id: x.id,
-                        permissions
-                    }
-                ]
-            }, []);
-
-            guild.commands.permissions.set({ fullPermissions });
-        });
-    });
 }
 
 module.exports = {

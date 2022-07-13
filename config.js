@@ -1,9 +1,9 @@
 module.exports = {
-    botClientID: "986580340674031636", // client application id du bot (trouveable sur https://discord.com/developers/application)
+    botClientID: "847377325136805908", // client application id du bot (trouveable sur https://discord.com/developers/application)
     botPrefix: "!",
-    token: "ODQ3Mzc3MzI1MTM2ODA1OTA4.GLhOb3.RmjdryPEa2mTHVFugfS4VYH2RB20ImRGQ1Xfj4",
+    token: "ODQ3Mzc3MzI1MTM2ODA1OTA4.G2Eudf.LeyJTw2HBtTnWzP3t97I0DF3zMs9IlQuJpW4Xc",
     channelJoin:"986600018268004434",
-    guildID: "983043373789233222", // id server
+    guildID: "965542937343692820", // id server
     ownerID: "768393722554613791", // id du proprietaire du serveur
     embedColor: "#00dbff",
     embedfooterText: "SpacyUnlocks",

@@ -9,7 +9,7 @@ module.exports = {
         {
             name: 'command',
             description: 'Quel commande as tu besoin ?',
-            type: 'STRING',
+            type: 3,
             required: false
         }
     ],
@@ -52,8 +52,8 @@ module.exports = {
 
             // This is what it commands when using the command without arguments
             const helpEmbed = new client.discord.MessageEmbed()
-            .setTitle(`${client.user.username} SlashHelp`)
-            .setDescription(` Hello **<@${interaction.member.id}>**, I am <@${client.user.id}>.  \nTu peux utiliser \`/help <slash_command>\` pour voir plus d'info des SlashCommands!\n**Commands total:** ${client.commands.size}\n**Total SlashCommands:** ${client.slash.size}`)
+            .setTitle(`📚 Aides`)
+            .setDescription(`L'ensemble des commandes que vous pouvez utiliser sur le discord de la communauté Vigrid`)
             .addField("🤖 - Bot SlashCommands", botCommandsList.map((data) => `${data}`).join(", "), true)
             .addField("🛠 - Utility SlashCommands", utilityCommandsList.map((data) => `${data}`).join(", "), true)
             .addField("📩 - Tickets SlashCommands", ticketsCommandsList.map((data) => `${data}`).join(", "), true)
