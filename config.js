@@ -1,7 +1,7 @@
 module.exports = {
     botClientID: "847377325136805908", // client application id du bot (trouveable sur https://discord.com/developers/application)
     botPrefix: "!",
-    token: "ODQ3Mzc3MzI1MTM2ODA1OTA4.G2Eudf.LeyJTw2HBtTnWzP3t97I0DF3zMs9IlQuJpW4Xc",
+    token: "ODQ3Mzc3MzI1MTM2ODA1OTA4.G9_cNF.TXsTH3nP79qcIr6mWoyqfKQMWU-ugrAOGNV1nQ",
     channelJoin:"986600018268004434",
     guildID: "965542937343692820", // id server
     ownerID: "768393722554613791", // id du proprietaire du serveur

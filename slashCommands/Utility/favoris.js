@@ -13,29 +13,29 @@ module.exports = {
         const embedOne = new client.discord.MessageEmbed()
         .setTitle(`Etape 1:`)
         .setDescription(`Cliquer sur l'onglet **Afficher** puis **Serveurs**'`, true)
+        .setImage(url="attachment://favorisone.png")
         .setColor('RANDOM')
         .setTimestamp()
 
-        await interaction.channel.send({embeds: [embedOne]});
-        await interaction.channel.send({files: [imgOne]});
+        await interaction.channel.send({embeds: [embedOne], files: [imgOne], ephemeral: true});
 
         const embedTwo = new client.discord.MessageEmbed()
         .setTitle(`Etape 2:`)
         .setDescription(`Une nouvelle fenêtre va apparaître. Cliquer sur l'onglet **Favoris** puis **Ajouter un serveur**.`, true)
         .setColor('RANDOM')
+        .setImage(url="attachment://favoristwo.png")
         .setTimestamp()
 
-        await interaction.channel.send({embeds: [embedTwo]});
-        await interaction.channel.send({files: [imgTwo]});
+        await interaction.channel.send({embeds: [embedTwo], files: [imgTwo], ephemeral: true});
 
         const embedThree = new client.discord.MessageEmbed()
         .setTitle(`Etape 3:`)
         .setDescription(`Un nouvel onglet va s'ouvrir. Rentrer l'adresse IP trouvé sur Discord. Cliquer ensuite sur le bouton **Chercher à cette adresse** et ajouter la carte.`, true)
         .setColor('RANDOM')
+        .setImage(url="attachment://favoristhree.png")
         .setTimestamp()
 
-        await interaction.channel.send({embeds: [embedThree]});
-        await interaction.channel.send({files: [imgThree]});
+        await interaction.channel.send({embeds: [embedThree], files: [imgThree], ephemeral: true});
 
       }
       catch(err){

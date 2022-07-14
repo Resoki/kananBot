@@ -17,28 +17,29 @@ module.exports = {
 
         Cliquez en haut à gauche de votre discord sur le nom du discord Vigrid.')`, true)
         .setColor('RANDOM')
+        .setImage(url="attachment://pseudoone.png")
         .setTimestamp()
 
-        await interaction.channel.send({embeds: [embedOne], ephemeral: true});
-        await interaction.channel.send({files: [imgOne], ephemeral: true});
+        await interaction.channel.send({embeds: [embedOne], files: [imgOne] });
 
         const embedTwo = new client.discord.MessageEmbed()
         .setTitle(`Etape 2:`)
         .setDescription(`Dans la liste déroulante cliquez sur **Changer le pseudo.**`, true)
         .setColor('RANDOM')
+        .setImage(url="attachment://pseudotwo.png")
         .setTimestamp()
 
-        await interaction.channel.send({embeds: [embedTwo], ephemeral: true});
-        await interaction.channel.send({files: [imgTwo], ephemeral: true});
+        await interaction.channel.send({embeds: [embedTwo], files: [imgTwo]});
 
         const embedThree = new client.discord.MessageEmbed()
         .setTitle(`Etape 3:`)
         .setDescription(`Dans la liste déroulante cliquez sur **Changer le pseudo**.`, true)
         .setColor('RANDOM')
+        .setImage(url="attachment://pseudothree.png")
         .setTimestamp()
 
-        await interaction.channel.send({embeds: [embedThree], ephemeral: true});
-        await interaction.channel.send({files: [imgThree], ephemeral: true});
+        await interaction.channel.send({embeds: [embedThree],files: [imgThree]});
+
 
       }
       catch(err){
