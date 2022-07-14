@@ -1,6 +1,6 @@
 const { Client, Collection, Intents } = require('discord.js');
 const handler = require("./handler/index");
-const { token} = require('./config');
+const {token} = require('./config');
 
 const client = new Client({
     intents: [

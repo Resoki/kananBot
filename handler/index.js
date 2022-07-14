@@ -86,16 +86,16 @@ const loadSlashCommands = async function (client) {
     }
     (async () => {
         try {
-            console.log('Started refreshing application (/) commands.');
+            console.log(chalk.bgGreen.black('Started refreshing application (/) commands.'));
     
             await rest.put(
                 Routes.applicationGuildCommands(global.botClientID, global.guildID),
                 { body: client.slash },
             );
     
-            console.log('Successfully reloaded application (/) commands.');
+            console.log(chalk.bgGreen.black('Successfully reloaded application (/) commands.'));
         } catch (error) {
-            console.error(`erreur lors du load des commandes: ${error}`);
+            console.log(chalk.bgRed.black`erreur lors du load des commandes: ${error}`);
         }
     })();
 

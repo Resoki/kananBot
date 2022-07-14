@@ -3,7 +3,7 @@
 module.exports = {
     name: "ping",
     category: "Utility",
-    description: "Check the bot's ping!",
+    description: "🏓 Check le ping du bot !",
     userPerms: ["SEND_MESSAGES"],
     ownerOnly: false,
     run: async (client, interaction) => {

@@ -1,10 +1,10 @@
 const { readdirSync } = require("fs");
-
+const { Permissions } = require("discord.js");
 // Example of how to make a Help SlashCommand
 
 module.exports = {
-    name: "help",
-    usage: '/help <command>',
+    name: "helpmod",
+    usage: '/helpmod <command>',
     options: [
         {
             name: 'command',
@@ -14,41 +14,29 @@ module.exports = {
         }
     ],
     category: "Bot",
-    description: "Retourne toutes les commandes !",
+    description: "🔴 Retourne toutes les commandes de modération !",
     userPerms: ["SEND_MESSAGES"],
     ownerOnly: false,
     run: async (client, interaction) => {
+        const permission = interaction.member.permissions.has(Permissions.FLAGS.BAN_MEMBERS);
+        if (!permission)
+        return interaction.reply(`❌ | Tu n'as pas la permission d'utiliser cette commande !`);
+
         const commandInt = interaction.options.getString("command");
         if (!commandInt) {
 
-            const botCommandsList = [];
-            readdirSync(`./slashCommands/Bot`).forEach((file) => {
-                const filen = require(`../../slashCommands/Bot/${file}`);
+            const modCommandsList = [];
+            readdirSync(`./slashCommands/Mod`).forEach((file) => {
+                const filen = require(`../../slashCommands/Mod/${file}`);
                 const name = `\`${filen.name}\``
-                botCommandsList.push(name);
-            });
-
-            const utilityCommandsList = [];
-            readdirSync(`./slashCommands/Utility`).forEach((file) => {
-                const filen = require(`../../slashCommands/Utility/${file}`);
-                const name = `\`${filen.name}\``
-                utilityCommandsList.push(name);
-            });
-
-            const ticketsCommandsList = [];
-            readdirSync(`./slashCommands/Tickets`).forEach((file) => {
-                const filen = require(`../../slashCommands/Tickets/${file}`);
-                const name = `\`${filen.name}\``
-                ticketsCommandsList.push(name);
+                modCommandsList.push(name);
             });
 
             const helpEmbed = new client.discord.MessageEmbed()
-            .setTitle(`📚 Aides`)
+            .setTitle(`📚 Aides Moderation`)
             .setDescription(`L'ensemble des commandes que vous pouvez utiliser sur le discord de la communauté Vigrid`)
-            .addField("🤖 - Bot SlashCommands", botCommandsList.map((data) => `${data}`).join(", "), true)
-            .addField("🛠 - Utility SlashCommands", utilityCommandsList.map((data) => `${data}`).join(", "), true)
-            .addField("📩 - Tickets SlashCommands", ticketsCommandsList.map((data) => `${data}`).join(", "), true)
-            .setColor(client.config.embedColor)
+            .addField("🤖 - Mod SlashCommands", modCommandsList.map((data) => `${data}`).join(", "), true)
+            .setColor('RED')
             .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 
             interaction.reply({ embeds: [helpEmbed]});

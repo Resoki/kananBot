@@ -14,7 +14,7 @@ module.exports = {
         .setColor('RANDOM')
         .setTimestamp()
 
-        return interaction.reply({ embeds: [ipEmbed]});
+        return interaction.reply({ embeds: [ipEmbed], ephemeral: true});
       }
       catch(err){
         return interaction.channel.send(`Une erreur a eu lieu **ip.js** \n${err}`)

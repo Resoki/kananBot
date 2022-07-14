@@ -6,17 +6,16 @@ module.exports = {
     guildID: "965542937343692820", // id server
     ownerID: "768393722554613791", // id du proprietaire du serveur
     embedColor: "#00dbff",
-    embedfooterText: "SpacyUnlocks",
+    embedfooterText: "kanan Bot",
+    channelGeneral: "965598603852808292",
 
     ticketsSupportRoles: [ // role allow to see ticket
-        "983047636670099486",
-        "983048000077197342"
+        "965543563414892545",
+        "965543563414892545"
     ],
-    ticketsOpenCategory: "983286788758077440", // id when open ticket
-    ticketsCloseCategory: "983286788758077440", // id when close ticket
-    ticketsTranscripts: "983286996120268800", // channel transcript,
-    roleClientPC: "983047841272451082",
-    roleClientConsole: "986361097575600201",
-
-    channelInvite: "983045634753982474",
+    ticketsOpenCategory: "965598489872588810", // id when open ticket
+    ticketsCloseCategory: "965598489872588810", // id when close ticket
+    ticketsTranscripts: "965598489872588810", // channel transcript,
+    channelJoin: "965598678465265754",
+    channelMemberRemove: "965598825131679754"
 }

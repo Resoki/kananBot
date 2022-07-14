@@ -1,7 +1,5 @@
 const { readdirSync } = require("fs");
 
-// Example of how to make a Help Command
-
 module.exports = {
     name: "help",
     aliases: ["h", "commands"],
@@ -11,9 +9,6 @@ module.exports = {
     ownerOnly: false,
     run: async (client, message, args) => {
 
-        // Buttons that take you to a link
-        // If you want to delete them, remove this part of
-        // the code and in line: 55 delete ", components: [row]"
         const row = new client.discord.MessageActionRow()
         .addComponents(
             new client.discord.MessageButton()
@@ -83,7 +78,6 @@ module.exports = {
                     { name: 'Category', value: `${category}` }
                 )
                 .setColor(client.config.embedColor)
-                .setFooter({ text: `${client.config.embedfooterText}`, iconURL: `${client.user.displayAvatarURL()}` });
 
                 message.reply({ embeds: [helpCmdEmbed], allowedMentions: { repliedUser: false } });
             }

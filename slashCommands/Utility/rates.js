@@ -2,13 +2,13 @@ module.exports = {
   name: "rates",
   aliases: ["rates"],
   category: "Utility",
-  description: "Les rates du serveur ARK Vígríd.",
+  description: "🆙 Les rates du serveur ARK Vígríd.",
   ownerOnly: false,
   run: async (client, interaction, args) => {
     try {
 
       const ipEmbed = new client.discord.MessageEmbed()
-      .setTitle(`Les rates des serveurs ARK Vígríd`)
+      .setTitle(`🆙 Les rates des serveurs ARK Vígríd`)
       .setDescription(`Bonjour <@${interaction.member.user.id}>, voici les rates de nos serveurs.
       ᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔᚔ\n
       :white_small_square: Niveau maximum du personnage : 180
